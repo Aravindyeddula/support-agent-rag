@@ -1,5 +1,7 @@
 # Atlas — Agentic RAG Support Copilot
 
+[![Verify](https://github.com/Aravindyeddula/support-agent-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/Aravindyeddula/support-agent-rag/actions/workflows/ci.yml)
+
 An AI engineering portfolio project that answers support questions from an indexed knowledge base, shows its retrieval and tool activity, and prepares escalation drafts for human approval.
 
 **Python 3.12 · FastAPI · OpenAI Responses API · BM25 + embeddings · SQLite · Server-sent events**
@@ -332,7 +334,7 @@ with httpx.stream("POST", f"{base}/api/runs/stream", timeout=180, json={
 
 For live requests, optionally include `"model": "gpt-4.1-mini"`. Only configured model choices are accepted. To approve a draft, POST `{"token": "<approval_token from done event>"}` to its run's approval endpoint. Treat that capability as private and do not put it in a public example or URL.
 
-Validation errors normally return HTTP 422; unsupported models and missing live credentials return 400; invalid approval capabilities return 403; runs without a completed draft return 409; a full local run gate returns 429. Once an SSE response starts, later execution failures arrive as `error` events, so a client must inspect the stream as well as its initial HTTP status.
+Validation errors normally return HTTP 422; unsupported models and missing live credentials return 400; invalid or unavailable approval capabilities return 403; an ineligible draft can return 409 after capability validation; a full local run gate returns 429. Once an SSE response starts, later execution failures arrive as `error` events, so a client must inspect the stream as well as its initial HTTP status.
 
 ## Persistence and project structure
 
@@ -415,7 +417,7 @@ python scripts/live_check.py --models gpt-4.1-mini --repeats 3
 python scripts/package.py
 ```
 
-The browser check does not use your configured key. The ZIP helper excludes credentials, databases, virtual environments, Git metadata, and caches. GitHub Actions is configured to run Python tests and the offline evaluation on pushes and pull requests without a model key; the retrieval report is uploaded as an artifact.
+The browser check does not use your configured key. The ZIP helper excludes credentials, databases, virtual environments, Git metadata, and caches. GitHub Actions runs Python tests and the offline evaluation on pushes and pull requests without a model key; the retrieval report is uploaded as an artifact. The [initial published implementation passed these checks on GitHub](https://github.com/Aravindyeddula/support-agent-rag/actions/runs/39154443640).
 
 ## Docker
 

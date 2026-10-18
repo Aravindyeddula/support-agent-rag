@@ -11,6 +11,7 @@ Verified locally on Windows with Python 3.12.14 and headless Microsoft Edge. App
 - Offline evaluation from a temporary database seeded only with the shipped corpus.
 - Live OpenAI checks: the exact question "How should I handle HTTP 429 rate limit errors?" produced source-cited answers with `gpt-4.1-mini`, `gpt-4.1`, and `gpt-4.1-nano`. Three consecutive additional `gpt-4.1-mini` checks passed. These exercised embeddings, cached-vector reuse, structured final outputs, and source-ID validation. Credentials were loaded from the local environment and are excluded from source packages.
 - The same question was rerun in the user's open in-app browser. The cited answer and verified-source status were visible. Screenshots are saved in `docs/live-workbench.jpg` and `docs/live-answer.jpg`.
+- GitHub Actions passed the Python tests and offline retrieval evaluation on Ubuntu with Python 3.12 for published implementation commit `9878411` on October 18, 2026. [View the successful run](https://github.com/Aravindyeddula/support-agent-rag/actions/runs/39154443640).
 
 The evaluation report contains 14 synthetic cases: 11 answerable and three with no relevant source. The measured BM25 baseline has hit rate@4 1.000, MRR@4 1.000, and no-evidence accuracy 1.000. The test set is authored alongside the documents and is intended as a regression check.
 
@@ -19,6 +20,5 @@ The evaluation report contains 14 synthetic cases: 11 answerable and three with 
 - A systematic live answer-quality evaluation across diverse questions. Scripted doubles and HTTP mocks cover the broader provider protocol.
 - A Docker build or hosted deployment.
 - Production-load testing, independent answer-quality review, or a live-model prompt-injection evaluation.
-- GitHub Actions: the workflow is supplied; it has not run on a remote repository.
 
 The installed Starlette test client currently emits a deprecation warning about its `httpx` integration. Tests pass with the pinned versions; the warning is not suppressed.
