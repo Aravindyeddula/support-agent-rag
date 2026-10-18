@@ -1,0 +1,49 @@
+{
+  "question": "How should I handle HTTP 429 rate limit errors?",
+  "scope": "Live smoke check of one synthetic support question; not an accuracy benchmark.",
+  "passed": true,
+  "results": [
+    {
+      "model": "gpt-4.1-mini",
+      "attempt": 1,
+      "passed": true,
+      "outcome": "answered",
+      "citation_count": 1,
+      "latency_ms": 1338,
+      "usage": {
+        "input_tokens": 965,
+        "output_tokens": 85,
+        "embedding_tokens": 11,
+        "requests": 2
+      }
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "attempt": 2,
+      "passed": true,
+      "outcome": "answered",
+      "citation_count": 1,
+      "latency_ms": 1928,
+      "usage": {
+        "input_tokens": 965,
+        "output_tokens": 85,
+        "embedding_tokens": 11,
+        "requests": 2
+      }
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "attempt": 3,
+      "passed": true,
+      "outcome": "answered",
+      "citation_count": 1,
+      "latency_ms": 1651,
+      "usage": {
+        "input_tokens": 965,
+        "output_tokens": 85,
+        "embedding_tokens": 11,
+        "requests": 2
+      }
+    }
+  ]
+}

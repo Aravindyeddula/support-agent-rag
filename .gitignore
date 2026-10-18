@@ -1,0 +1,12 @@
+.venv/
+.env
+.env.*
+!.env.example
+.data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+test-results/
+playwright-report/
+*.sqlite3*
+*.zip

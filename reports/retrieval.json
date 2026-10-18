@@ -1,0 +1,197 @@
+{
+  "retrieval": "BM25",
+  "k": 4,
+  "cases": 14,
+  "answerable_cases": 11,
+  "unanswerable_cases": 3,
+  "hit_rate_at_4": 1.0,
+  "mrr_at_4": 1.0,
+  "no_evidence_accuracy": 1.0,
+  "scope": "Small synthetic retrieval regression set; not an independent benchmark or LLM factuality evaluation.",
+  "results": [
+    {
+      "id": "rate-429",
+      "question": "How should I handle HTTP 429 rate limit errors?",
+      "relevant": [
+        "api-limits"
+      ],
+      "retrieved": [
+        "api-limits",
+        "api-limits",
+        "troubleshooting",
+        "api-limits"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "team-limit",
+      "question": "What is the Team plan API request limit per minute?",
+      "relevant": [
+        "api-limits"
+      ],
+      "retrieved": [
+        "api-limits",
+        "api-limits",
+        "api-limits",
+        "security"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "refund",
+      "question": "When is a first subscription payment eligible for a refund?",
+      "relevant": [
+        "billing"
+      ],
+      "retrieved": [
+        "billing",
+        "billing",
+        "troubleshooting",
+        "billing"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "duplicate-charge",
+      "question": "How do I escalate duplicate invoice charges?",
+      "relevant": [
+        "billing"
+      ],
+      "retrieved": [
+        "billing",
+        "billing",
+        "troubleshooting"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "invite-expiry",
+      "question": "An invitation expired. How long are invitations valid?",
+      "relevant": [
+        "access"
+      ],
+      "retrieved": [
+        "access"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "sso-lockout",
+      "question": "All administrators are locked out after an SSO change. What should support do?",
+      "relevant": [
+        "access"
+      ],
+      "retrieved": [
+        "access",
+        "access",
+        "access",
+        "incident-history"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "webhook-signature",
+      "question": "How do I verify the webhook signature?",
+      "relevant": [
+        "webhooks"
+      ],
+      "retrieved": [
+        "webhooks",
+        "webhooks",
+        "webhooks",
+        "incident-history"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "webhook-retry",
+      "question": "What are the webhook delivery retry intervals?",
+      "relevant": [
+        "webhooks"
+      ],
+      "retrieved": [
+        "webhooks",
+        "webhooks",
+        "webhooks",
+        "incident-history"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "retention",
+      "question": "How long are workflow execution logs retained?",
+      "relevant": [
+        "security"
+      ],
+      "retrieved": [
+        "security",
+        "troubleshooting",
+        "billing",
+        "incident-history"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "persistent-5xx",
+      "question": "What details are needed to escalate repeated HTTP 5xx workflow errors?",
+      "relevant": [
+        "troubleshooting"
+      ],
+      "retrieved": [
+        "troubleshooting",
+        "api-limits",
+        "troubleshooting",
+        "troubleshooting"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "incident",
+      "question": "When was the historical US East delayed webhooks incident resolved?",
+      "relevant": [
+        "incident-history"
+      ],
+      "retrieved": [
+        "incident-history",
+        "incident-history",
+        "security"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "no-weather",
+      "question": "Will it snow in Reykjavik tomorrow?",
+      "relevant": [],
+      "retrieved": [],
+      "hit": true,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "no-sports",
+      "question": "Who won the football world championship?",
+      "relevant": [],
+      "retrieved": [],
+      "hit": true,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "no-food",
+      "question": "Give me a recipe for chocolate brownies.",
+      "relevant": [],
+      "retrieved": [],
+      "hit": true,
+      "reciprocal_rank": 0.0
+    }
+  ]
+}
